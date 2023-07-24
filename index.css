@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+  /* to avoid width problems if padding */
+}
+.sp{
+  width: 50px;
+  height: 50px;
+  background-image: url("birdnest.jpeg");
+  
+}
+img{
+  height: au;
+  width: auto;
+}
+h1{
+  background-color: black;
+  display: block;
+  text-shadow: 5px 5px 5px gold;
+  width: 100%;
+  text-align: center;
+  font-family: serif;
+  font-size: 150px;
+  display: ruby;
+}
+.panel{
+  border: 5px solid rgb(131, 10, 85);
+  background-color: rgb(175, 79, 15);
+  margin-top: 0px;
+}
+#img-1 {
+  background-image: url("bird-1.jpeg");
+}
+
+#img-2 {
+  background-image: url("bird-2.jpeg");
+}
+
+#img-3 {
+  background-image: url("bird-3.jpeg");
+}
+
+#img-4 {
+  background-image: url("bird-4.jpeg");
+}
+
+#img-5 {
+  background-image: url("bird-5.jpeg");
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+  
+  overflow: hidden;
+  /* to hide scrollbar */
+  background-image: url("bodfimal.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.7s ease-in;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
